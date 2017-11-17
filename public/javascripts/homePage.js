@@ -1,6 +1,6 @@
 
 
-var aapp = angular.module('cryptoapp',['ngMaterial','ngMessages','material.svgAssetsCache','ngAnimate']);
+var app = angular.module('cryptoapp',['ngMaterial','ngMessages','material.svgAssetsCache','ngAnimate']);
 
 
 var controlr = function($scope,$http,$interval){
