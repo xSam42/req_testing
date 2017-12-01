@@ -22,14 +22,18 @@
 	<% include ../partials/homePageHead.ejs %>
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>Crypto</title>
+	<title>Eth Testing</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 </head>
-<body ng-app="ethapp">
-<div ng-controller="appcontroller">
-	Hello, World!!!!!!!
-
+	<body ng-app="ethapp">
+	<div ng-controller="appcontroller">
+		<h4>Example Ether Donate Button working with Metamask account 1 as web3.eth.accounts[0]</h4>
+		<input type="text" id="ethDonationValue" placeholder="in eth..."></input>
+		<md-button type="submit" value="Donate" ng-click="donateEth()">Donate!</md-button>
+		<div>
+			<span>Result: </span><span ng-model="donationTransResult"></span>
+		</div>
 	</div>
 	</body>
 </html>

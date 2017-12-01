@@ -7,13 +7,16 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var web3_lib = require('./node_modules_personal/web3_lib.js');
 
 var app = express();
 var http = require('http').createServer(app);
+var io = require('socket.io')(http);
+
 app.set('port', (process.env.PORT || 5050));
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
@@ -49,4 +52,15 @@ app.use(function(err, req, res, next) {
 http.listen(app.get('port'), function(){
 	console.log('Node app is running on port: ', app.get('port'));
 });
+
+io.on('connection', function(socket){
+
+  socket.on('recEthDonation', function(ethValue,network){
+    web3_lib.sendEthTrans(ethValue,network,function(dataOut){
+        socket.emit('ethDonateToC',dataOut);
+    });
+  });
+});
+
+
 module.exports = app;
