@@ -67,6 +67,7 @@ io.on('connection', function(socket){
     });
   });
   let requestNetwork = new RequestNetwork();
+  console.log(requestNetwork);
 
 
 });

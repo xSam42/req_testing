@@ -6,12 +6,11 @@ Request JS: https://github.com/RequestNetwork/requestNetwork.js
 Request WhitePaper: 
 
 Steps to Recreate:
-
 1. `npm install @requestnetwork/request-network.js --save`
-2. `var Req = require('request');`
-3. 
-
-
+2.  npm install babel-cli
+3. npm i babel-preset-node6
+4. ./node_modules/babel-cli/bin/babel-node.js --presets node6 ./app.js 
+5. Change `web3-Single.js` file at `./node_modules/@requestnetwork/request-network.js/dist/src/servicesExternal/web3-Single.js` to `web3-single.js` (lowercase s)
 
 
 
