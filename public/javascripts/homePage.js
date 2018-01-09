@@ -1,6 +1,6 @@
 
 
-var app = angular.module('ethapp',['ngMaterial','ngMessages','material.svgAssetsCache','ngAnimate']);
+var app = angular.module('ethapp',['ngMaterial','ngMessages','ngAnimate']);
 
 
 var controlr = function($scope,$http,$interval){

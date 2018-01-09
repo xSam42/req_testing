@@ -9,6 +9,12 @@ var index = require('./routes/index');
 var users = require('./routes/users');
 var web3_lib = require('./node_modules_personal/web3_lib.js');
 
+
+// Request Lib
+import RequestNetwork from '@requestnetwork/request-network.js/dist/src/requestNetwork';
+
+
+
 var app = express();
 var http = require('http').createServer(app);
 var io = require('socket.io')(http);
@@ -60,6 +66,9 @@ io.on('connection', function(socket){
         socket.emit('ethDonateToC',dataOut);
     });
   });
+  let requestNetwork = new RequestNetwork();
+
+
 });
 
 

@@ -6,11 +6,13 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "@requestnetwork/request-network.js": "0.0.2",
     "angular": "^1.6.7",
     "angular-animate": "^1.6.7",
     "angular-aria": "^1.6.7",
     "angular-material": "^1.1.5",
     "angular-messages": "^1.6.7",
+    "babel-preset-node6": "^11.0.0",
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
@@ -25,5 +27,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:xSam42/eth_barebones.git"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
   }
 }
